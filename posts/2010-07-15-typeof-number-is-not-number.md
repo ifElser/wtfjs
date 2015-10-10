@@ -39,4 +39,13 @@ Solution 2 is better; cast "this" to the Number type and then the types are equa
     }
 </code>
 
+Remember: this - it is always an object literal an your need to use valueOf method for access primitive value
+<code>
+    Number.prototype.isInteger = function() {
+      return this.valueOf() === Math.floor(this);
+    }
+</code>
+
+
+
 --- [@attaboy](http://twitter.com/attaboy)
